@@ -1,0 +1,111 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://keypad.gd" type="Script" id=1]
+[ext_resource path="res://keypadlarge.png" type="Texture" id=2]
+
+[node name="keypad" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 240.0
+margin_bottom = 395.0
+texture = ExtResource( 2 )
+
+[node name="one" type="Button" parent="."]
+margin_left = 18.0
+margin_top = 132.0
+margin_right = 38.0
+margin_bottom = 152.0
+rect_scale = Vector2( 3, 3 )
+flat = true
+
+[node name="two" type="Button" parent="."]
+margin_left = 86.0
+margin_top = 130.0
+margin_right = 106.0
+margin_bottom = 150.0
+rect_scale = Vector2( 3, 3 )
+flat = true
+
+[node name="three" type="Button" parent="."]
+margin_left = 154.0
+margin_top = 128.0
+margin_right = 174.0
+margin_bottom = 148.0
+rect_scale = Vector2( 3, 3 )
+flat = true
+
+[node name="four" type="Button" parent="."]
+margin_left = 18.0
+margin_top = 197.0
+margin_right = 38.0
+margin_bottom = 217.0
+rect_scale = Vector2( 3, 3 )
+flat = true
+
+[node name="five" type="Button" parent="."]
+margin_left = 87.0
+margin_top = 199.0
+margin_right = 107.0
+margin_bottom = 219.0
+rect_scale = Vector2( 3, 3 )
+flat = true
+
+[node name="six" type="Button" parent="."]
+margin_left = 154.0
+margin_top = 197.0
+margin_right = 174.0
+margin_bottom = 217.0
+rect_scale = Vector2( 3, 3 )
+flat = true
+
+[node name="seven" type="Button" parent="."]
+margin_left = 20.0
+margin_top = 263.0
+margin_right = 40.0
+margin_bottom = 283.0
+rect_scale = Vector2( 3, 3 )
+flat = true
+
+[node name="eight" type="Button" parent="."]
+margin_left = 89.0
+margin_top = 263.0
+margin_right = 109.0
+margin_bottom = 283.0
+rect_scale = Vector2( 3, 3 )
+flat = true
+
+[node name="nine" type="Button" parent="."]
+margin_left = 157.0
+margin_top = 262.0
+margin_right = 177.0
+margin_bottom = 282.0
+rect_scale = Vector2( 3, 3 )
+flat = true
+
+[node name="enter" type="Button" parent="."]
+margin_left = 21.0
+margin_top = 333.0
+margin_right = 84.0
+margin_bottom = 369.0
+rect_scale = Vector2( 3, 1 )
+flat = true
+
+[node name="code" type="Label" parent="."]
+margin_left = 21.0
+margin_top = 40.0
+margin_right = 84.0
+margin_bottom = 65.0
+rect_scale = Vector2( 3, 3 )
+valign = 1
+
+[connection signal="pressed" from="one" to="." method="_on_one_pressed"]
+[connection signal="pressed" from="two" to="." method="_on_two_pressed"]
+[connection signal="pressed" from="three" to="." method="_on_three_pressed"]
+[connection signal="pressed" from="four" to="." method="_on_four_pressed"]
+[connection signal="pressed" from="five" to="." method="_on_five_pressed"]
+[connection signal="pressed" from="six" to="." method="_on_six_pressed"]
+[connection signal="pressed" from="seven" to="." method="_on_seven_pressed"]
+[connection signal="pressed" from="eight" to="." method="_on_eight_pressed"]
+[connection signal="pressed" from="nine" to="." method="_on_nine_pressed"]
+[connection signal="pressed" from="enter" to="." method="_on_enter_pressed"]
